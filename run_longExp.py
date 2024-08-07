@@ -35,6 +35,11 @@ parser.add_argument('--seq_len', type=int, default=96, help='input sequence leng
 parser.add_argument('--label_len', type=int, default=48, help='start token length')
 parser.add_argument('--pred_len', type=int, default=96, help='prediction sequence length')
 
+# TSMixer specific arguments
+parser.add_argument('--num_blocks', type=int, default=1, help='number of blocks in TSMixer')
+parser.add_argument('--hidden_size', type=int, default=64, help='hidden size in TSMixer')
+parser.add_argument('--single_layer_mixer', type=bool, default=False, help='single layer mixer in TSMixer')
+parser.add_argument('--affine', type=bool, default=True, help='affine parameter in RevIN')
 
 # DLinear
 parser.add_argument('--individual', action='store_true', default=False, help='DLinear: a linear layer for each variate(channel) individually')
